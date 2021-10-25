@@ -1,0 +1,4 @@
+D:\UPC\Programacion II\Semana 9\SpriteFormTemplate\x64\Debug\FormsTemplate.vcxproj.AssemblyReference.cache
+D:\UPC\Programacion II\Semana 9\SpriteFormTemplate\x64\Debug\FormsTemplate.MyForm.resources
+D:\UPC\Programacion II\Semana 9\SpriteFormTemplate\x64\Debug\FormsTemplate.vcxproj.GenerateResource.cache
+D:\UPC\Programacion II\Semana 9\SpriteFormTemplate\x64\Debug\FormsTemplate.exe
