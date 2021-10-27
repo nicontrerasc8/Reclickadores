@@ -121,21 +121,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Base.cpp" />
-    <ClCompile Include="Basket.cpp" />
-    <ClCompile Include="Bowling.cpp" />
-    <ClCompile Include="Controladora.cpp" />
-    <ClCompile Include="Futbol.cpp" />
-    <ClCompile Include="Monigote.cpp" />
     <ClCompile Include="MyForm.cpp" />
-    <ClCompile Include="Playa.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Base.h" />
-    <ClInclude Include="Basket.h" />
-    <ClInclude Include="Bowling.h" />
-    <ClInclude Include="Controladora.h" />
-    <ClInclude Include="Futbol.h" />
-    <ClInclude Include="Monigote.h" />
+    <ClInclude Include="Controller.h" />
+    <ClInclude Include="Garbage.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

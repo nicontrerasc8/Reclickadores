@@ -1,5 +1,5 @@
 #pragma once
-#include "Controladora.h"
+#include "Controller.h"
 
 namespace FormsTemplate {
 
@@ -19,9 +19,9 @@ namespace FormsTemplate {
 		MyForm(void)
 		{
 			InitializeComponent();
-			objControladora = new Controladora();
-			bmpPelota = gcnew Bitmap("ball.png");
-			bmpMonigote = gcnew Bitmap("link.png");
+			controller = new Controller();
+			bmpGarbage = gcnew Bitmap("images\\sprites\\garbage.png");
+			bmpPlayer = gcnew Bitmap("images\\sprites\\player.png");
 			//
 			//TODO: Add the constructor code here
 			//
@@ -37,16 +37,16 @@ namespace FormsTemplate {
 			{
 				delete components;
 			}
-			delete objControladora, bmpPelota, bmpMonigote;
+			delete controller, bmpGarbage, bmpPlayer;
 		}
 
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		Controladora* objControladora;
-		Bitmap^ bmpPelota;
-		Bitmap^ bmpMonigote;
+		Controller* controller;
+		Bitmap^ bmpGarbage;
+		Bitmap^ bmpPlayer;
 	private: System::Windows::Forms::Timer^ timer1;
 	private: System::ComponentModel::IContainer^ components;
 
@@ -87,8 +87,8 @@ namespace FormsTemplate {
 		BufferedGraphics^ bf = espacio->Allocate(g, ClientRectangle);
 		
 		bf->Graphics->Clear(Color::White);
-		objControladora->dibujarPelota(bf->Graphics, bmpPelota);
-		objControladora->dibujarMonigote(bf->Graphics, bmpMonigote);
+		controller->dibujarGarbage(bf->Graphics, bmpGarbage);
+		controller->dibujarPlayer(bf->Graphics, bmpPlayer);
 		
 		bf->Render(g);
 		delete g, espacio, bf;
@@ -96,10 +96,10 @@ namespace FormsTemplate {
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void MyForm_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
-		if (e->KeyCode == Keys::Left) objControladora->desplazarMonigote(direccion::left);
-		else if (e->KeyCode == Keys::Right) objControladora->desplazarMonigote(direccion::right);
-		else if (e->KeyCode == Keys::Up) objControladora->desplazarMonigote(direccion::up);
-		else if (e->KeyCode == Keys::Down) objControladora->desplazarMonigote(direccion::down);
+		if (e->KeyCode == Keys::A) controller->desplazarPlayer(direccion::left);
+		else if (e->KeyCode == Keys::D) controller->desplazarPlayer(direccion::right);
+		else if (e->KeyCode == Keys::W) controller->desplazarPlayer(direccion::up);
+		else if (e->KeyCode == Keys::S) controller->desplazarPlayer(direccion::down);
 	}
 	};
 }

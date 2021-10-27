@@ -5,14 +5,14 @@ public enum direccion { up, down, left, right, none };
 class Base {
 protected:
 	int x, y, w, h, dx, dy;
-	int maxFil, maxCol, col, fil;
+	int maxRow, maxCol, col, row;
 	int fraccionMovY, fraccionMovX;
 	direccion orientacion;
-	bool eliminar;
+	bool active;
 public:
 	Base();
 	Base(int x, int y, int w, int h);
-	Base(int x, int y, int w, int h, int maxFil, int maxCol, int fil, int col);
+	Base(int x, int y, int w, int h, int maxRow, int maxCol, int row, int col);
 	~Base();
 
 	virtual void mover(Graphics^ g);
@@ -27,11 +27,11 @@ public:
 	void setH(int h);
 	void setDx(int dx);
 	void setDy(int dy);
-	void setMaxFil(int f);
+	void setMaxRow(int r);
 	void setMaxCol(int c);
-	void setFil(int f);
+	void setRow(int r);
 	void setCol(int c);
-	void setEliminar(bool e);
+	void setActive(bool e);
 	void setFraccionMovY(int movY);
 	void setFraccionMovX(int movX);
 
@@ -41,12 +41,13 @@ public:
 	int getH();
 	int getDx();
 	int getDy();
-	int getMaxFil();
+	int getMaxRow();
 	int getMaxCol();
-	int getFil();
+	int getRow();
 	int getCol();
-	bool getEliminar();
+	bool getActive();
 	int getFraccionMovY();
 	int getFraccionMovX();
-	Rectangle getRectangle();
+	Rectangle getArea();
+	Rectangle getNextArea();
 };

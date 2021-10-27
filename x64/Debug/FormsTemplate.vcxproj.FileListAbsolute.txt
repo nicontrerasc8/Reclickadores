@@ -2,3 +2,7 @@ D:\UPC\Programacion II\Semana 9\SpriteFormTemplate\x64\Debug\FormsTemplate.vcxpr
 D:\UPC\Programacion II\Semana 9\SpriteFormTemplate\x64\Debug\FormsTemplate.MyForm.resources
 D:\UPC\Programacion II\Semana 9\SpriteFormTemplate\x64\Debug\FormsTemplate.vcxproj.GenerateResource.cache
 D:\UPC\Programacion II\Semana 9\SpriteFormTemplate\x64\Debug\FormsTemplate.exe
+D:\UPC\Programacion II\TF\Desarrollo\x64\Debug\FormsTemplate.vcxproj.AssemblyReference.cache
+D:\UPC\Programacion II\TF\Desarrollo\x64\Debug\FormsTemplate.MyForm.resources
+D:\UPC\Programacion II\TF\Desarrollo\x64\Debug\FormsTemplate.vcxproj.GenerateResource.cache
+D:\UPC\Programacion II\TF\Desarrollo\x64\Debug\FormsTemplate.exe

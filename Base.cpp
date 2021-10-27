@@ -3,7 +3,7 @@
 Base::Base() { 
 	dx = 0;
 	dy = 0;
-	eliminar = false;
+	active = true;
 	orientacion = direccion::none;
 }
 
@@ -14,22 +14,22 @@ Base::Base(int x, int y, int w, int h) {
 	this->h = h;
 	dx = 0;
 	dy = 0;
-	eliminar = false;
+	active = true;
 	orientacion = direccion::none;
 }
 
-Base::Base(int x, int y, int w, int h, int maxFil, int maxCol, int fil, int col) {
+Base::Base(int x, int y, int w, int h, int maxRow, int maxCol, int row, int col) {
 	this->x = x;
 	this->y = y;
 	this->w = w;
 	this->h = h;
 	dx = 0;
 	dy = 0;
-	eliminar = false;
+	active = true;
 	orientacion = direccion::none;
-	this->maxFil = maxFil;
+	this->maxRow = maxRow;
 	this->maxCol = maxCol;
-	this->fil = fil;
+	this->row = row;
 	this->col = col;
 }
 
@@ -48,8 +48,8 @@ void Base::dibujar(Graphics^ g) {
 
 void Base::dibujarDesdeImg(Graphics^ g, Bitmap^ bmp) {
 	w = bmp->Width / maxCol;
-	h = bmp->Height / maxFil;
-	Rectangle porcion = Rectangle(col * w, fil * w, w, h);
+	h = bmp->Height / maxRow;
+	Rectangle porcion = Rectangle(col * w, row * h, w, h);
 	g->DrawImage(bmp, x, y, porcion, GraphicsUnit::Pixel);
 	col++;
 	if (col == maxCol) col = 0;
@@ -64,10 +64,19 @@ void Base::desplazamiento(direccion d) {
 	dx = 0;
 	dy = 0;
 
-	if (orientacion == direccion::up) { dy = - (h / fraccionMovY); fil = 2; }
-	else if (orientacion == direccion::down) { dy = h / fraccionMovY; fil = 3; }
-	else if (orientacion == direccion::left) { dx = - (w / fraccionMovX); fil = 0; }
-	else if (orientacion == direccion::right) { dx = w / fraccionMovX; fil = 1; }
+	if (orientacion == direccion::up) { 
+		dy = - (h / fraccionMovY); 
+		row = 3; 
+	} else if (orientacion == direccion::down) { 
+		dy = h / fraccionMovY; 
+		row = 0; 
+	} else if (orientacion == direccion::left) { 
+		dx = - (w / fraccionMovX); 
+		row = 1; 
+	} else if (orientacion == direccion::right) { 
+		dx = w / fraccionMovX; 
+		row = 2; 
+	}
 }
 
 void Base::setX(int x) {
@@ -93,24 +102,24 @@ void Base::setDy(int dy) {
 	this->dy = dy;
 }
 
-void Base::setMaxFil(int f) {
-	maxFil = f;
+void Base::setMaxRow(int r) {
+	maxRow = r;
 }
 
 void Base::setMaxCol(int c) {
 	maxCol = c;
 }
 
-void Base::setFil(int f) {
-	fil = f;
+void Base::setRow(int r) {
+	row = r;
 }
 
 void Base::setCol(int c) {
 	col = c;
 }
 
-void Base::setEliminar(bool e) {
-	this->eliminar = e;
+void Base::setActive(bool e) {
+	active = e;
 }
 
 void Base::setFraccionMovY(int movY) {
@@ -144,24 +153,24 @@ int Base::getDy() {
 	return dy;
 }
 
-int Base::getMaxFil() {
-	return maxFil;
+int Base::getMaxRow() {
+	return maxRow;
 }
 
 int Base::getMaxCol() {
 	return maxCol;
 }
 
-int Base::getFil() {
-	return fil;
+int Base::getRow() {
+	return row;
 }
 
 int Base::getCol() {
 	return col;
 }
 
-bool Base::getEliminar() {
-	return eliminar;
+bool Base::getActive() {
+	return active;
 }
 
 int Base::getFraccionMovY() {
@@ -172,6 +181,10 @@ int Base::getFraccionMovX() {
 	return fraccionMovX;
 }
 
-Rectangle Base::getRectangle() {
+Rectangle Base::getArea() {
 	return Rectangle(x, y, w, h);
+}
+
+Rectangle Base::getNextArea() {
+	return Rectangle(x + w, y + h, w, h);
 }
