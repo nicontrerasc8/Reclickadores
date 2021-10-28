@@ -1,0 +1,5 @@
+quinto 100
+cuarto 200
+tercero 300
+segundo 400
+primero 500

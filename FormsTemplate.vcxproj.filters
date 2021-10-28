@@ -41,5 +41,20 @@
     <ClInclude Include="Garbage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="frmMenu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frmRankings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frmCredits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ranking.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="rankings.txt" />
   </ItemGroup>
 </Project>

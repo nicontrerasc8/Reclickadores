@@ -1,4 +1,4 @@
-#include "MyForm.h"
+#include "frmMenu.h"
   
 using namespace System;
 using namespace System::Windows::Forms; [STAThread]
@@ -6,5 +6,5 @@ using namespace System::Windows::Forms; [STAThread]
 void main() {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	Application::Run(gcnew FormsTemplate::MyForm());
+	Application::Run(gcnew FormsTemplate::frmMenu());
 }

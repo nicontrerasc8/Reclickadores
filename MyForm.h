@@ -72,6 +72,7 @@ namespace FormsTemplate {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(573, 388);
+			this->DoubleBuffered = true;
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;

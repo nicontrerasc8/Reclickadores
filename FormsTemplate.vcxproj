@@ -126,17 +126,36 @@
   <ItemGroup>
     <ClInclude Include="Base.h" />
     <ClInclude Include="Controller.h" />
+    <ClInclude Include="frmCredits.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmMenu.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmRankings.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Garbage.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Playa.h" />
+    <ClInclude Include="Ranking.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmMenu.resx">
+      <DependentUpon>frmMenu.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRankings.resx">
+      <DependentUpon>frmRankings.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="rankings.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

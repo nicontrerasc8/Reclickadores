@@ -6,3 +6,5 @@ D:\UPC\Programacion II\TF\Desarrollo\x64\Debug\FormsTemplate.vcxproj.AssemblyRef
 D:\UPC\Programacion II\TF\Desarrollo\x64\Debug\FormsTemplate.MyForm.resources
 D:\UPC\Programacion II\TF\Desarrollo\x64\Debug\FormsTemplate.vcxproj.GenerateResource.cache
 D:\UPC\Programacion II\TF\Desarrollo\x64\Debug\FormsTemplate.exe
+D:\UPC\Programacion II\TF\Desarrollo\x64\Debug\FormsTemplate.frmMenu.resources
+D:\UPC\Programacion II\TF\Desarrollo\x64\Debug\FormsTemplate.frmRankings.resources

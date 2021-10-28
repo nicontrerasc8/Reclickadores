@@ -1,3 +1,5 @@
+  FormsTemplate.frmMenu.resources - Embedded, ContainedInManifestFile, 
+  FormsTemplate.frmRankings.resources - Embedded, ContainedInManifestFile, 
   FormsTemplate.MyForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly FormsTemplate, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
@@ -18,6 +20,15 @@ Struct direccion: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
   :System.Enum
   Fields:
     Int32 value__ : Public, SpecialName, RTSpecialName
+Class FormsTemplate.frmRankings: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class FormsTemplate.frmCredits: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class FormsTemplate.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class FormsTemplate.frmMenu: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
