@@ -1,27 +1,21 @@
 #pragma once
 #include <vector>
 #include "Player.h"
-#include "Garbage.h"
+#include "GarbageBags.h"
 
 using namespace std;
 
 class Controller {
 private:
-	vector <Base*> garbageBags;
+	GarbageBags* gBags;
 	Player* player;
 public:
 	Controller() {
-		int cant = 5;
-		while(cant--) {
-			garbageBags.push_back(new Garbage(1 + rand() % 100, 1 + rand() % 200, 10, 10));
-		}
 		player = new Player(45, 85, 20, 20);
+		gBags = new GarbageBags(player->getArea());
 	}
 	~Controller() {
-		delete player;
-		for (int i = 0; i < garbageBags.size(); i++)
-			delete garbageBags.at(i);
-		garbageBags.clear();
+		delete player, gBags;
 	}
 	
 	void dibujarPlayer(Graphics^ g, Bitmap^ bmp) {
@@ -29,14 +23,12 @@ public:
 		player->mover(g);
 	}
 	void dibujarGarbage(Graphics^ g, Bitmap^ bmp) {
-		for (Base* garbage : garbageBags) {
-			garbage->dibujarDesdeImg(g, bmp);
-			garbage->mover(g);
-		}
+		gBags->dibujar(g, bmp);
 	}
 	void desplazarPlayer(direccion d) {
-		player->desplazamiento(d);
-		//colision(); on controller
+		// incomplete
+		if (!gBags->colision(player->getNextArea())) {
+			player->desplazamiento(d);
+		}
 	}
-	
 };

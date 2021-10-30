@@ -136,6 +136,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Garbage.h" />
+    <ClInclude Include="GarbageBags.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>

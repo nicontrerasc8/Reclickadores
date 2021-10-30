@@ -53,6 +53,9 @@
     <ClInclude Include="Ranking.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GarbageBags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="rankings.txt" />

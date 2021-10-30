@@ -186,5 +186,5 @@ Rectangle Base::getArea() {
 }
 
 Rectangle Base::getNextArea() {
-	return Rectangle(x + w, y + h, w, h);
+	return Rectangle(x + dx, y + dy, w, h);
 }

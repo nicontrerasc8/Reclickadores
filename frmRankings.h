@@ -104,6 +104,7 @@ namespace FormsTemplate {
 	private: System::Void frmRankings_Load(System::Object^ sender, System::EventArgs^ e) {
 		String^ t = gcnew String(ranking->getCompleteString().c_str());
 		label2->Text = t;
+		delete t;
 	}
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 		
